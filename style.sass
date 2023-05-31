@@ -1,0 +1,492 @@
+$color_bg_navSuperior: #121921
+$color_bg_navInferior: #232f3f
+$color_bg_footer_inicio: #37475A
+$color_bg_footer_inicioHover: #485769
+$color_bg_footer_acercaDe: #232F3E
+$color_letra2_footer_acercaDe: #BDBFC2
+$color_letra2_footer_acercaDe_divisa: #cccccc
+$color_linea_footer_acercaDe:#3A4553
+$color_bg_footer_productos: #131A22
+$color_letra1_footer_productos:#DDDDDD
+$color_letra2_footer_productos: #999999
+
+
+*
+    box-sizing: border-box
+    top: 0
+    margin: 0px
+    font-size: 10px
+    text-decoration: none
+    font-family: arial
+
+body
+    background-color: #E3E6E6
+
+@mixin orientacion_cajas($display: null, $direccion: null, $justificar: null, $alinear: null, $gridColumnas: null, $place: null, $gap: null, $margen: null, $relleno: null)
+    display: $display //1//
+    flex-direction: $direccion //2//
+    justify-content: $justificar //3//
+    align-items: $alinear //4//
+    grid-template-columns: $gridColumnas //5//
+    place-content: $place //6//
+    gap: $gap //7//
+    margin: $margen //8//
+    padding: $relleno //9//
+
+@mixin nav_hover()
+    border: solid 1px white
+    cursor: pointer
+
+#nav
+    &_superior
+        @include orientacion_cajas(flex, null, null, center, null, null, 5px, null, 0px 10px 0px 10px)
+        background-color: $color_bg_navSuperior
+        color: white
+        height: 60px
+        &_izquierda
+            @include orientacion_cajas(flex, null, center, center, null, null, 10px)
+            &_logo
+                width: 100px
+                height: 50px
+            &_logo:hover
+                @include nav_hover
+            &_envios
+                width: 105px
+                height: 50px
+                @include orientacion_cajas(flex, null, center, center, null, null, 3px)
+                &_punteroDeMapa
+                    padding-top: 8px
+                &_textos
+                    &_p1
+                        color: #cccccc
+                        font-size: 1.13rem
+                    &_p2
+                        font-weight: bold
+                        font-size: 1.5rem
+            &_envios:hover
+                @include nav_hover
+
+
+
+        &_centro
+            @include orientacion_cajas(flex, null, center, center)
+            width: 680px
+            height: 40px
+            &_selectorDeCategorias
+                @include orientacion_cajas(flex, null, center, center, null, null, 2px)
+                border-right: solid 1px #cdcdcd
+                outline: none
+                border-radius: 3px 0px 0px 3px
+                background-color: #f3f3f3
+                width: 65px
+                height: 40px
+                &_identificador
+                    color: #757575
+                    font-size: 1.25rem
+                &_flechaDesplegar
+                    width: 7px
+                    height: 3px
+            &_selectorDeCategorias:hover
+                background-color: #dadada
+                cursor: pointer
+            &_busqueda
+                border: none
+                outline: none
+                width: 570px
+                height: 40px
+                font-size: 1.5rem
+                padding-left: 5px
+            &_lupa
+                background-color: #FEBD69
+                padding: 7px 8px 8px 8px
+                border-radius: 0px 3px 3px 0px
+            &_lupa:hover
+                background-color: #f3a847
+                cursor: pointer
+
+
+        &_derecha
+            @include orientacion_cajas(flex, null, center, center, null, null, 5px)
+            &_pais
+                @include orientacion_cajas(flex, null, center, center, null, null, null)
+                cursor: pointer
+                width: 71px
+                height: 50px
+                &_lenguaje
+                    font-weight: bold
+                    font-size: 1.4rem
+                    padding-top: 3px
+                &_flechaDesplegar
+                    width: 8px
+                    height: 4px
+                    margin-top: 9px
+            &_pais:hover
+                @include nav_hover
+
+
+            &_cuenta
+                @include orientacion_cajas(flex, null, center, center)
+                width: 130px
+                height: 50px
+                padding: 0px 0px 0px 0px
+                &_textos
+                    @include orientacion_cajas(flex, column)
+                    &_p1
+                        font-size: 1.2rem
+                    &_p2
+                        font-size: 1.5rem
+                        font-weight: bold
+                &_flechaDesplegar
+                    width: 8px
+                    height: 4px
+                    margin: 9px 0px 0px 3px
+            &_cuenta:hover
+                @include nav_hover
+                
+
+            &_pedidos
+                @include orientacion_cajas(flex, column, center, center)
+                width: 90px
+                height: 50px
+                &_p1
+                    font-size: 1.2rem
+                &_p2
+                    font-size: 1.5rem
+                    font-weight: bold
+            &_pedidos:hover
+                @include nav_hover
+
+
+            &_carrito
+                @include orientacion_cajas(flex, null, center, center)
+                width: 100px
+                height: 50px
+                // position: absolute
+                &_contador
+                    color: #F08804
+                    font-size: 1.5rem
+                    font-weight: bold
+                    position: relative
+                    top: -10px
+                    left: 25px
+                &_identificador
+                    font-size: 1.5rem
+                    font-weight: bold
+                    padding-top: 10px
+            &_carrito:hover
+                @include nav_hover
+
+
+
+
+
+
+    &_inferior
+        @include orientacion_cajas(flex, null, space-between, center, null, null, null, null, 0px 10px 0px 10px)
+        height: 40px
+        background-color: $color_bg_navInferior
+        color: white
+        &_izquierda
+            @include orientacion_cajas(flex, null, null, center, null, null,1px)
+            &_todo
+                @include orientacion_cajas(flex, null, center, center)
+                width: 73px
+                height: 39px
+                &_menu
+                    width: 25px
+                    height: 28px
+                &_identificador
+                    font-size: 1.5rem
+                    font-weight: bold
+            &_todo:hover
+                @include nav_hover
+
+
+            &_ofertas
+                @include orientacion_cajas(flex, null, center, center)
+                width: 113px
+                height: 39px
+                &_identificador
+                    font-size: 1.4rem
+            &_ofertas:hover
+                @include nav_hover
+
+
+            &_servicio
+                @include orientacion_cajas(flex, null, center, center)
+                width: 131px
+                height: 39px
+                &_identificador
+                    font-size: 1.4rem
+            &_servicio:hover
+                @include nav_hover
+
+
+            &_listas
+                @include orientacion_cajas(flex, null, center, center)
+                width: 54px
+                height: 39px
+                &_identificador
+                    font-size: 1.4rem
+            &_listas:hover
+                @include nav_hover
+
+            &_tarjetas
+                @include orientacion_cajas(flex, null, center, center)
+                width: 134px
+                height: 39px
+                &_identificador
+                    font-size: 1.4rem
+            &_tarjetas:hover
+                @include nav_hover
+
+            &_vender
+                @include orientacion_cajas(flex, null, center, center)
+                width: 63px
+                height: 39px
+                &_identificador
+                    font-size: 1.4rem
+            &_vender:hover
+                @include nav_hover
+        
+        &_derecha
+            @include orientacion_cajas(flex, null, center, center)
+            width: 230px
+            height: 30px
+            &_identificador
+                font-size: 1.5rem
+                font-weight: bold
+        &_derecha:hover
+            @include nav_hover
+
+
+#productos_fondo
+    width: 100%
+    position: relative
+#productos_fondo img 
+    width: 100%
+#productos_fondo::after 
+    content: ""
+    width: 100%
+    height: 300px
+    position: absolute
+    left: 0
+    bottom: 0
+    background-image: linear-gradient(to bottom, transparent, #E3E6E6)
+
+
+#productos_grid
+    @include orientacion_cajas(grid, null, null, null, repeat(4,1fr), null, 20px, 340px 0px 0px 0px, 0px 20px 20px 20px )
+    position: absolute
+    width: 100%
+    .productos_grid_articulo
+        display: flex
+        padding: 20px
+        width: 312px
+        height: 420px
+        background-color: #ffffff
+    .productos_grid_articulo_titulo
+        font-size: 1.8rem
+        font-weight: bold
+    &_articulo1
+        @include orientacion_cajas (flex, column, null, null, null, null, 20px)
+        &_boton
+            outline: none
+            border: none
+            border-radius: 8px
+            font-size: 1.3rem
+            background-color: #FFD814
+            padding: 8px 20px 8px 20px
+        &_boton:hover
+            cursor: pointer
+            background-color: #F7CA00
+    &_articulo2
+        @include orientacion_cajas (flex, column, null, null, null, null, 20px)
+        &_contenido
+            @include orientacion_cajas (grid, null, null, null, repeat(2,1fr), null, 15px)
+            &_imagenytexto
+                @include orientacion_cajas (flex, column, null, null, null, null, 2px)
+                &_imagen
+                    width: 130px
+                    height: 102px
+                &_p
+                    font-size: 1.2rem
+            &_imagenytexto:hover
+                cursor: pointer
+        &_foot
+            padding-top: 20px
+            color: #007185
+            font-size: 1.3rem
+        &_foot:hover
+            color: #C7511F
+            text-decoration: underline
+            cursor: pointer
+    &_articulo3
+        @include orientacion_cajas (flex, column, null, null, null, null, 10px)
+        &_contenido
+            &_imagenytexto
+                &_imagen
+                    width:272.25px
+                    height: 276.4px
+            &_imagenytexto:hover
+                cursor: pointer
+
+
+#identificacion
+    @include orientacion_cajas(flex, null, center, center,null, null,null, 1020px 0px 0px 0px )
+    width: 100%
+    height: 166px
+    background-color: #fff
+    &_contenedor
+        @include orientacion_cajas(flex, column, center, center, null, null, 5px)
+        height: 126px
+        width: 100%
+        border: solid 1px #DDDDDD
+        border-radius: 5px
+        &_p1
+            font-size: 1.3rem
+        &_boton
+            cursor: pointer
+            border: solid 1px #ECB01C
+            border-radius: 5px
+            outline: none
+            font-size: 1.3rem
+            background: linear-gradient(to bottom, #FFD774 30%, #FFC636 70%)
+            padding: 5px 80px 5px 80px
+            font-weight: bold
+        &_p2
+            font-size: 1.1rem
+        &_span
+            font-size: 1.1rem
+            font-weight: bold
+            color: #348E9D
+        &_span:hover
+            color: #D2734B
+            cursor: pointer
+
+#pieDePagina
+    @include orientacion_cajas(flex, column, null, null)
+    width: 100%
+    &_inicio
+        @include orientacion_cajas(flex, null, center, center)
+        padding-top: 3px
+        width: 100%
+        height: 50px
+        background-color: $color_bg_footer_inicio
+        &_p
+            font-size: 1.5rem
+            color: white
+            font-weight: bold
+    &_inicio:hover
+        background-color: $color_bg_footer_inicioHover
+        cursor: pointer
+    &_acercaDe
+        @include orientacion_cajas (flex, column, null, null, null, null, null, null, null)
+        width: 100%
+        background-color: $color_bg_footer_acercaDe
+        &_columnas
+            @include orientacion_cajas (grid, null, null, null, repeat(4,1fr), null, 50px, null, 40px 100px 60px 190px)
+            border-bottom: solid 1px $color_linea_footer_acercaDe
+            width: 100%
+            &_columna
+                @include orientacion_cajas(flex, column, null, null, null, null, null, null)
+                &_titulo
+                    color: white
+                    font-size: 1.6rem
+                    font-weight: bold
+                &_elementos
+                    padding: 10px 0px 0px 0px
+                    &_texto
+                        padding-top: 10px
+                        color: $color_letra2_footer_acercaDe
+                        font-size: 1.4rem
+                    &_texto:hover
+                        cursor: pointer
+                        text-decoration: underline
+        &_divisa
+            @include orientacion_cajas(flex, null, null, center, null, null, 55px, null, 40px 0px 60px 330px)
+            &_logo
+                cursor: pointer
+            &_selectores
+                @include orientacion_cajas(flex, null, center, center, null, null, 10px)
+                &_lenguaje
+                    @include orientacion_cajas(flex, null, null, center, null, null, null, null, 10px 20px 10px 10px)
+                    border: solid 1px $color_letra2_footer_acercaDe
+                    width: 150px
+                    height: 40px
+                    gap: 10px
+                    &_mundo
+                        height: 25px
+                        width: 25px
+                    &_p
+                        font-size: 1.5rem
+                        color: white
+                    &_flechas
+                        padding-left: 10px
+                &_lenguaje:hover
+                    cursor: pointer
+                &_moneda
+                    @include orientacion_cajas(flex, null, null, center, null, null, null, null, 10px 20px 10px 10px)
+                    border: solid 1px $color_letra2_footer_acercaDe
+                    width: 230px
+                    height: 40px
+                    &_p
+                        color: white
+                        font-size: 1.5rem
+                &_moneda:hover
+                    cursor: pointer
+                &_pais
+                    @include orientacion_cajas(flex, null, null, center, null, null, null, null, 10px 20px 10px 10px)
+                    border: solid 1px $color_letra2_footer_acercaDe
+                    width: 160px
+                    height: 40px
+                    &_p
+                        color: white
+                        font-size: 1.5rem
+                &_pais:hover
+                    cursor: pointer
+    &_productos
+        background-color: $color_bg_footer_productos
+        &_columnas
+            @include orientacion_cajas (grid, null, null, null, repeat(6,1fr), null, 10px, null, 40px 190px 80px 190px)
+            &_bloque
+                padding: 10px 0px 0px 0px
+                &_p1
+                    font-size: 1.4rem
+                    color: $color_letra1_footer_productos
+                &_p1:hover
+                    cursor: pointer
+                    text-decoration: underline
+                &_p2
+                    font-size: 1.3rem
+                    color: $color_letra2_footer_productos
+                &_p2:hover
+                    cursor: pointer
+                    text-decoration: underline
+        &_derechos
+            @include orientacion_cajas (flex, column, center, center, null, null, 5px)
+            &_arriba
+                @include orientacion_cajas (flex, null, center, center, null, null, 10px)
+                &_p1
+                    color: white
+                    font-size: 1.3rem
+                &_p1:hover
+                    cursor: pointer
+                    text-decoration: underline white
+                &_p2
+                    color: white
+                    font-size: 1.3rem
+                &_p2:hover
+                    cursor: pointer
+                    text-decoration: underline white
+                &_p3
+                    color: white
+                    font-size: 1.3rem
+                &_p3:hover
+                    cursor: pointer
+                    text-decoration: underline white
+            &_abajo
+                padding: 0px 0px 60px 0px
+                &_p
+                    color: white
+                    font-size: 1.3rem
