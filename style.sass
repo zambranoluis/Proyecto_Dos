@@ -69,9 +69,9 @@ body
 
 
         &_centro
-            @include orientacion_cajas(flex, null, center, center)
+            @include orientacion_cajas(flex, null, center, center, null, null, null, null, 0.6px 0px 0px 0px)
             width: 680px
-            height: 40px
+            height: 45px
             &_selectorDeCategorias
                 @include orientacion_cajas(flex, null, center, center, null, null, 2px)
                 border-right: solid 1px #cdcdcd
@@ -103,6 +103,10 @@ body
             &_lupa:hover
                 background-color: #f3a847
                 cursor: pointer
+        &_centro:focus-within
+            border: solid 3px #FF9900
+            border-radius: 5px 5px 5px 5px
+            background-color: #FF9900
 
 
         &_derecha
@@ -473,6 +477,8 @@ body
                     cursor: pointer
     &_productos
         background-color: $color_bg_footer_productos
+        display: flex
+        flex-direction: column
         &_columnas
             @include orientacion_cajas (grid, null, null, null, repeat(6,1fr), null, 10px, null, 40px 190px 80px 190px)
             &_bloque
