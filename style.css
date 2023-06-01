@@ -328,7 +328,7 @@ body {
   position: relative;
 }
 
-#productos_fondo img {
+#productos_fondo_imagen {
   width: 100%;
 }
 
@@ -340,6 +340,26 @@ body {
   left: 0;
   bottom: 0;
   background-image: linear-gradient(to bottom, transparent, #E3E6E6);
+}
+
+#productos_fondo:hover {
+  cursor: pointer;
+}
+
+#productos_fondo_flechaCarruselIzquierda {
+  width: 34px;
+  height: 52px;
+  position: absolute;
+  top: 100px;
+  right: 1300px;
+}
+
+#productos_fondo_flechaCarruselDerecha {
+  width: 34px;
+  height: 52px;
+  position: absolute;
+  left: 1300px;
+  top: 100px;
 }
 
 #productos_grid {
