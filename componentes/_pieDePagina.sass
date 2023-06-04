@@ -1,0 +1,129 @@
+
+#pieDePagina
+    @include orientacion_cajas(flex, column, null, null)
+    width: 100%
+    &_inicio
+        @include orientacion_cajas(flex, null, center, center)
+        padding-top: 3px
+        width: 100%
+        height: 50px
+        background-color: $color_bg_footer_inicio
+        &_p
+            font-size: 1.5rem
+            color: white
+            font-weight: bold
+    &_inicio:hover
+        background-color: $color_bg_footer_inicioHover
+        cursor: pointer
+    &_acercaDe
+        @include orientacion_cajas (flex, column, null, null, null, null, null, null, null)
+        width: 100%
+        background-color: $color_bg_footer_acercaDe
+        &_columnas
+            @include orientacion_cajas (grid, null, null, null, repeat(4,1fr), null, 50px, null, 40px 100px 60px 190px)
+            border-bottom: solid 1px $color_linea_footer_acercaDe
+            width: 100%
+            &_columna
+                @include orientacion_cajas(flex, column, null, null, null, null, null, null)
+                &_titulo
+                    color: white
+                    font-size: 1.6rem
+                    font-weight: bold
+                &_elementos
+                    padding: 10px 0px 0px 0px
+                    &_texto
+                        padding-top: 10px
+                        color: $color_letra2_footer_acercaDe
+                        font-size: 1.4rem
+                    &_texto:hover
+                        cursor: pointer
+                        text-decoration: underline
+        &_divisa
+            @include orientacion_cajas(flex, null, null, center, null, null, 55px, null, 40px 0px 60px 330px)
+            &_logo
+                cursor: pointer
+            &_selectores
+                @include orientacion_cajas(flex, null, center, center, null, null, 10px)
+                &_lenguaje
+                    @include orientacion_cajas(flex, null, null, center, null, null, null, null, 10px 20px 10px 10px)
+                    border: solid 1px $color_letra2_footer_acercaDe
+                    width: 150px
+                    height: 40px
+                    gap: 10px
+                    &_mundo
+                        height: 25px
+                        width: 25px
+                    &_p
+                        font-size: 1.5rem
+                        color: white
+                    &_flechas
+                        padding-left: 10px
+                &_lenguaje:hover
+                    cursor: pointer
+                &_moneda
+                    @include orientacion_cajas(flex, null, null, center, null, null, null, null, 10px 20px 10px 10px)
+                    border: solid 1px $color_letra2_footer_acercaDe
+                    width: 230px
+                    height: 40px
+                    &_p
+                        color: white
+                        font-size: 1.5rem
+                &_moneda:hover
+                    cursor: pointer
+                &_pais
+                    @include orientacion_cajas(flex, null, null, center, null, null, null, null, 10px 20px 10px 10px)
+                    border: solid 1px $color_letra2_footer_acercaDe
+                    width: 160px
+                    height: 40px
+                    &_p
+                        color: white
+                        font-size: 1.5rem
+                &_pais:hover
+                    cursor: pointer
+    &_productos
+        background-color: $color_bg_footer_productos
+        display: flex
+        flex-direction: column
+        &_columnas
+            @include orientacion_cajas (grid, null, null, null, repeat(6,1fr), null, 10px, null, 40px 190px 80px 190px)
+            &_bloque
+                padding: 10px 0px 0px 0px
+                &_p1
+                    font-size: 1.4rem
+                    color: $color_letra1_footer_productos
+                &_p1:hover
+                    cursor: pointer
+                    text-decoration: underline
+                &_p2
+                    font-size: 1.3rem
+                    color: $color_letra2_footer_productos
+                &_p2:hover
+                    cursor: pointer
+                    text-decoration: underline
+        &_derechos
+            @include orientacion_cajas (flex, column, center, center, null, null, 5px)
+            &_arriba
+                @include orientacion_cajas (flex, null, center, center, null, null, 10px)
+                &_p1
+                    color: white
+                    font-size: 1.3rem
+                &_p1:hover
+                    cursor: pointer
+                    text-decoration: underline white
+                &_p2
+                    color: white
+                    font-size: 1.3rem
+                &_p2:hover
+                    cursor: pointer
+                    text-decoration: underline white
+                &_p3
+                    color: white
+                    font-size: 1.3rem
+                &_p3:hover
+                    cursor: pointer
+                    text-decoration: underline white
+            &_abajo
+                padding: 0px 0px 60px 0px
+                &_p
+                    color: white
+                    font-size: 1.3rem

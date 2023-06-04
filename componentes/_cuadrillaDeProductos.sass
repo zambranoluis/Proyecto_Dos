@@ -1,0 +1,55 @@
+#productos_grid
+    @include orientacion_cajas(grid, null, null, null, repeat(4,1fr), null, 20px, 340px 0px 0px 0px, 0px 20px 20px 20px )
+    position: absolute
+    width: 100%
+    .productos_grid_articulo
+        display: flex
+        padding: 20px
+        width: 312px
+        height: 420px
+        background-color: #ffffff
+    .productos_grid_articulo_titulo
+        font-size: 1.8rem
+        font-weight: bold
+    &_articulo1
+        @include orientacion_cajas (flex, column, null, null, null, null, 20px)
+        &_boton
+            outline: none
+            border: none
+            border-radius: 8px
+            font-size: 1.3rem
+            background-color: #FFD814
+            padding: 8px 20px 8px 20px
+        &_boton:hover
+            cursor: pointer
+            background-color: #F7CA00
+    &_articulo2
+        @include orientacion_cajas (flex, column, null, null, null, null, 20px)
+        &_contenido
+            @include orientacion_cajas (grid, null, null, null, repeat(2,1fr), null, 15px)
+            &_imagenytexto
+                @include orientacion_cajas (flex, column, null, null, null, null, 2px)
+                &_imagen
+                    width: 130px
+                    height: 102px
+                &_p
+                    font-size: 1.2rem
+            &_imagenytexto:hover
+                cursor: pointer
+        &_foot
+            padding-top: 20px
+            color: #007185
+            font-size: 1.3rem
+        &_foot:hover
+            color: #C7511F
+            text-decoration: underline
+            cursor: pointer
+    &_articulo3
+        @include orientacion_cajas (flex, column, null, null, null, null, 10px)
+        &_contenido
+            &_imagenytexto
+                &_imagen
+                    width:272.25px
+                    height: 276.4px
+            &_imagenytexto:hover
+                cursor: pointer

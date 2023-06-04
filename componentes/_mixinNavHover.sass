@@ -1,0 +1,200 @@
+#nav
+    &_superior
+        @include orientacion_cajas(flex, null, null, center, null, null, 5px, null, 0px 10px 0px 10px)
+        background-color: $color_bg_navSuperior
+        color: white
+        height: 60px
+        &_izquierda
+            @include orientacion_cajas(flex, null, center, center, null, null, 10px)
+            &_logo
+                width: 100px
+                height: 50px
+            &_logo:hover
+                @include nav_hover
+            &_envios
+                width: 105px
+                height: 50px
+                @include orientacion_cajas(flex, null, center, center, null, null, 3px)
+                &_punteroDeMapa
+                    padding-top: 8px
+                &_textos
+                    &_p1
+                        color: #cccccc
+                        font-size: 1.13rem
+                    &_p2
+                        font-weight: bold
+                        font-size: 1.5rem
+            &_envios:hover
+                @include nav_hover
+        &_centro
+            @include orientacion_cajas(flex, null, center, center, null, null, null, null, 0.6px 0px 0px 0px)
+            width: 680px
+            height: 45px
+            &_selectorDeCategorias
+                @include orientacion_cajas(flex, null, center, center, null, null, 2px)
+                border-right: solid 1px #cdcdcd
+                outline: none
+                border-radius: 3px 0px 0px 3px
+                background-color: #f3f3f3
+                width: 65px
+                height: 40px
+                &_identificador
+                    color: #757575
+                    font-size: 1.25rem
+                &_flechaDesplegar
+                    width: 7px
+                    height: 3px
+            &_selectorDeCategorias:hover
+                background-color: #dadada
+                cursor: pointer
+            &_busqueda
+                border: none
+                outline: none
+                width: 570px
+                height: 40px
+                font-size: 1.5rem
+                padding-left: 5px
+            &_lupa
+                background-color: #FEBD69
+                padding: 7px 8px 8px 8px
+                border-radius: 0px 3px 3px 0px
+            &_lupa:hover
+                background-color: #f3a847
+                cursor: pointer
+        &_centro:focus-within
+            border: solid 3px #FF9900
+            border-radius: 5px 5px 5px 5px
+            background-color: #FF9900
+        &_derecha
+            @include orientacion_cajas(flex, null, center, center, null, null, 5px)
+            &_pais
+                @include orientacion_cajas(flex, null, center, center, null, null, null)
+                cursor: pointer
+                width: 71px
+                height: 50px
+                &_lenguaje
+                    font-weight: bold
+                    font-size: 1.4rem
+                    padding-top: 3px
+                &_flechaDesplegar
+                    width: 8px
+                    height: 4px
+                    margin-top: 9px
+            &_pais:hover
+                @include nav_hover
+            &_cuenta
+                @include orientacion_cajas(flex, null, center, center)
+                width: 130px
+                height: 50px
+                padding: 0px 0px 0px 0px
+                &_textos
+                    @include orientacion_cajas(flex, column)
+                    &_p1
+                        font-size: 1.2rem
+                    &_p2
+                        font-size: 1.5rem
+                        font-weight: bold
+                &_flechaDesplegar
+                    width: 8px
+                    height: 4px
+                    margin: 9px 0px 0px 3px
+            &_cuenta:hover
+                @include nav_hover
+                
+            &_pedidos
+                @include orientacion_cajas(flex, column, center, center)
+                width: 90px
+                height: 50px
+                &_p1
+                    font-size: 1.2rem
+                &_p2
+                    font-size: 1.5rem
+                    font-weight: bold
+            &_pedidos:hover
+                @include nav_hover
+            &_carrito
+                @include orientacion_cajas(flex, null, center, center)
+                width: 100px
+                height: 50px
+                // position: absolute
+                &_contador
+                    color: #F08804
+                    font-size: 1.5rem
+                    font-weight: bold
+                    position: relative
+                    top: -10px
+                    left: 25px
+                &_identificador
+                    font-size: 1.5rem
+                    font-weight: bold
+                    padding-top: 10px
+            &_carrito:hover
+                @include nav_hover
+    &_inferior
+        @include orientacion_cajas(flex, null, space-between, center, null, null, null, null, 0px 10px 0px 10px)
+        height: 40px
+        background-color: $color_bg_navInferior
+        color: white
+        &_izquierda
+            @include orientacion_cajas(flex, null, null, center, null, null,1px)
+            &_todo
+                @include orientacion_cajas(flex, null, center, center)
+                width: 73px
+                height: 39px
+                &_menu
+                    width: 25px
+                    height: 28px
+                &_identificador
+                    font-size: 1.5rem
+                    font-weight: bold
+            &_todo:hover
+                @include nav_hover
+            &_ofertas
+                @include orientacion_cajas(flex, null, center, center)
+                width: 113px
+                height: 39px
+                &_identificador
+                    font-size: 1.4rem
+            &_ofertas:hover
+                @include nav_hover
+            &_servicio
+                @include orientacion_cajas(flex, null, center, center)
+                width: 131px
+                height: 39px
+                &_identificador
+                    font-size: 1.4rem
+            &_servicio:hover
+                @include nav_hover
+            &_listas
+                @include orientacion_cajas(flex, null, center, center)
+                width: 54px
+                height: 39px
+                &_identificador
+                    font-size: 1.4rem
+            &_listas:hover
+                @include nav_hover
+            &_tarjetas
+                @include orientacion_cajas(flex, null, center, center)
+                width: 134px
+                height: 39px
+                &_identificador
+                    font-size: 1.4rem
+            &_tarjetas:hover
+                @include nav_hover
+            &_vender
+                @include orientacion_cajas(flex, null, center, center)
+                width: 63px
+                height: 39px
+                &_identificador
+                    font-size: 1.4rem
+            &_vender:hover
+                @include nav_hover
+        &_derecha
+            @include orientacion_cajas(flex, null, center, center)
+            width: 230px
+            height: 30px
+            &_identificador
+                font-size: 1.5rem
+                font-weight: bold
+        &_derecha:hover
+            @include nav_hover
