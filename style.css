@@ -576,7 +576,8 @@ body {
   display: flex;
   align-items: center;
   padding: 10px 20px 10px 10px;
-  border: solid 1px #BDBFC2;
+  border: solid 1px #848688;
+  border-radius: 3px;
   width: 150px;
   height: 40px;
   gap: 10px;
@@ -599,9 +600,10 @@ body {
   display: flex;
   align-items: center;
   padding: 10px 20px 10px 10px;
-  border: solid 1px #BDBFC2;
+  border: solid 1px #848688;
+  border-radius: 3px;
   width: 230px;
-  height: 40px;
+  height: 42px;
 }
 #pieDePagina_acercaDe_divisa_selectores_moneda_p {
   color: white;
@@ -614,7 +616,8 @@ body {
   display: flex;
   align-items: center;
   padding: 10px 20px 10px 10px;
-  border: solid 1px #BDBFC2;
+  border: solid 1px #848688;
+  border-radius: 3px;
   width: 160px;
   height: 40px;
 }
