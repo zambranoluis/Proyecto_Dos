@@ -1,3 +1,217 @@
-@mixin nav_hover()
-    border: solid 1px white
-    cursor: pointer
+#nav
+    &_superior
+        @include orientacion_cajas(flex, null, null, center, null, null, 15px, null, 0px 10px 0px 10px)
+        background-color: $color_bg_navSuperior
+        color: white
+        height: 60px
+        &_izquierda
+            @include orientacion_cajas(flex, null, center, center, null, null, 10px)
+            &_logo
+                width: 100px
+                height: 50px
+            &_logo:hover
+                @include nav_hover
+            &_envios
+                width: 105px
+                height: 50px
+                @include orientacion_cajas(flex, null, center, center, null, null, 3px)
+                &_punteroDeMapa
+                    padding-top: 8px
+                &_textos
+                    &_p1
+                        color: #cccccc
+                        font-size: 1.13rem
+                    &_p2
+                        font-weight: bold
+                        font-size: 1.5rem
+            &_envios:hover
+                @include nav_hover
+        &_centro
+            @include orientacion_cajas(flex, null, center, center, null, null, null, null, 0.6px 0px 0px 0px)
+            width: 680px
+            height: 40px
+            position: relative
+            &_selectorDeCategorias 
+                @include orientacion_cajas(flex, null, center, center, null, null,)
+                &_lista
+                    position: absolute
+                    left: -0.55px
+                    color: #555555
+                    border: none
+                    outline: none
+                    appearance: none
+                    width: 65px
+                    height: 40px
+                    border-radius: 6px 0px 0px 6px
+                    font-size: 1.2rem
+                    padding: 4px 0px 0px 10px
+                &_lista > option
+                    background-color: #e9e9ed
+                    font-size: 1.4rem
+                &_lista:hover
+                    cursor: pointer
+                    background-color: #DADADA
+                &_lista:focus
+                    outline: 3px solid $color_borde_navCategoriaYBusqueda
+                &_flechaDesplegar
+                    position: absolute
+                    color: #666666
+                    top: 10px
+                    left: 43px
+                    font-size: 2rem
+            &_selectorDeCategorias:hover
+                cursor: pointer
+            &_busqueda
+                border: none
+                outline: none
+                border-radius: 4px 4px 4px 4px
+                width: 679px
+                height: 40px
+                font-size: 1.5rem
+                padding-left: 80px
+            &_busqueda:focus-within
+                outline: solid 3px $color_borde_navCategoriaYBusqueda
+                border-radius: 5px 5px 5px 5px
+            &_lupa
+                position: absolute
+                left: 639px
+                background-color: $color_bg_lupa
+                padding: 7px 8px 8px 8px
+                border-radius: 0px 6px 6px 0px
+            &_lupa:hover
+                cursor: pointer
+                background-color: $color_bg_lupaHover
+            &_lupa:focus
+                outline: 3px solid $color_borde_navCategoriaYBusqueda
+                background-color: $color_bg_lupaHover
+        &_derecha
+            @include orientacion_cajas(flex, null, center, center, null, null, 5px)
+            &_pais
+                @include orientacion_cajas(flex, null, center, center, null, null, 4px)
+                cursor: pointer
+                width: 71px
+                height: 50px
+                &_lenguaje
+                    font-weight: bold
+                    font-size: 1.4rem
+                    padding-top: 3px
+                &_flechaDesplegar
+                    width: 8px
+                    height: 4px
+                    margin-top: 9px
+            &_pais:hover
+                @include nav_hover
+            &_cuenta
+                @include orientacion_cajas(flex, null, center, center)
+                width: 130px
+                height: 50px
+                padding: 0px 0px 0px 0px
+                &_textos
+                    @include orientacion_cajas(flex, column)
+                    &_p1
+                        font-size: 1.2rem
+                    &_p2
+                        font-size: 1.5rem
+                        font-weight: bold
+                &_flechaDesplegar
+                    width: 8px
+                    height: 4px
+                    margin: 9px 0px 0px 3px
+            &_cuenta:hover
+                @include nav_hover
+            &_pedidos
+                @include orientacion_cajas(flex, column, center, center)
+                width: 90px
+                height: 50px
+                &_p1
+                    font-size: 1.2rem
+                &_p2
+                    font-size: 1.5rem
+                    font-weight: bold
+            &_pedidos:hover
+                @include nav_hover
+            &_carrito
+                @include orientacion_cajas(flex, null, center, center)
+                width: 100px
+                height: 50px
+                &_contador
+                    color: $color_contadorCarrito
+                    font-size: 1.5rem
+                    font-weight: bold
+                    position: relative
+                    top: -10px
+                    left: 25px
+                &_identificador
+                    font-size: 1.5rem
+                    font-weight: bold
+                    padding-top: 10px
+            &_carrito:hover
+                @include nav_hover    
+    &_inferior
+        @include orientacion_cajas(flex, null, space-between, center, null, null, null, null, 0px 10px 0px 10px)
+        height: 40px
+        background-color: $color_bg_navInferior
+        color: white
+        &_izquierda
+            @include orientacion_cajas(flex, null, null, center, null, null,1px)
+            &_todo
+                @include orientacion_cajas(flex, null, center, center)
+                width: 73px
+                height: 37px
+                &_menu
+                    width: 25px
+                    height: 28px
+                &_identificador
+                    font-size: 1.5rem
+                    font-weight: bold
+            &_todo:hover
+                @include nav_hover
+            &_ofertas
+                @include orientacion_cajas(flex, null, center, center)
+                width: 113px
+                height: 37px
+                &_identificador
+                    font-size: 1.4rem
+            &_ofertas:hover
+                @include nav_hover
+            &_servicio
+                @include orientacion_cajas(flex, null, center, center)
+                width: 131px
+                height: 37px
+                &_identificador
+                    font-size: 1.4rem
+            &_servicio:hover
+                @include nav_hover
+            &_listas
+                @include orientacion_cajas(flex, null, center, center)
+                width: 54px
+                height: 37px
+                &_identificador
+                    font-size: 1.4rem
+            &_listas:hover
+                @include nav_hover
+            &_tarjetas
+                @include orientacion_cajas(flex, null, center, center)
+                width: 134px
+                height: 37px
+                &_identificador
+                    font-size: 1.4rem
+            &_tarjetas:hover
+                @include nav_hover
+            &_vender
+                @include orientacion_cajas(flex, null, center, center)
+                width: 63px
+                height: 37px
+                &_identificador
+                    font-size: 1.4rem
+            &_vender:hover
+                @include nav_hover
+        &_derecha
+            @include orientacion_cajas(flex, null, center, center)
+            width: 230px
+            height: 30px
+            &_identificador
+                font-size: 1.5rem
+                font-weight: bold
+        &_derecha:hover
+            @include nav_hover

@@ -14,7 +14,7 @@ body {
 #nav_superior {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 15px;
   padding: 0px 10px 0px 10px;
   background-color: #121921;
   color: white;
@@ -31,7 +31,7 @@ body {
   height: 50px;
 }
 #nav_superior_izquierda_logo:hover {
-  border: solid 1px white;
+  outline: solid 1px white;
   cursor: pointer;
 }
 #nav_superior_izquierda_envios {
@@ -54,7 +54,7 @@ body {
   font-size: 1.5rem;
 }
 #nav_superior_izquierda_envios:hover {
-  border: solid 1px white;
+  outline: solid 1px white;
   cursor: pointer;
 }
 #nav_superior_centro {
@@ -63,53 +63,77 @@ body {
   align-items: center;
   padding: 0.6px 0px 0px 0px;
   width: 680px;
-  height: 45px;
+  height: 40px;
+  position: relative;
 }
 #nav_superior_centro_selectorDeCategorias {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2px;
-  border-right: solid 1px #cdcdcd;
+}
+#nav_superior_centro_selectorDeCategorias_lista {
+  position: absolute;
+  left: -0.55px;
+  color: #555555;
+  border: none;
   outline: none;
-  border-radius: 3px 0px 0px 3px;
-  background-color: #f3f3f3;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   width: 65px;
   height: 40px;
+  border-radius: 6px 0px 0px 6px;
+  font-size: 1.2rem;
+  padding: 4px 0px 0px 10px;
 }
-#nav_superior_centro_selectorDeCategorias_identificador {
-  color: #757575;
-  font-size: 1.25rem;
+#nav_superior_centro_selectorDeCategorias_lista > option {
+  background-color: #e9e9ed;
+  font-size: 1.4rem;
+}
+#nav_superior_centro_selectorDeCategorias_lista:hover {
+  cursor: pointer;
+  background-color: #DADADA;
+}
+#nav_superior_centro_selectorDeCategorias_lista:focus {
+  outline: 3px solid #FF9900;
 }
 #nav_superior_centro_selectorDeCategorias_flechaDesplegar {
-  width: 7px;
-  height: 3px;
+  position: absolute;
+  color: #666666;
+  top: 10px;
+  left: 43px;
+  font-size: 2rem;
 }
 #nav_superior_centro_selectorDeCategorias:hover {
-  background-color: #dadada;
   cursor: pointer;
 }
 #nav_superior_centro_busqueda {
   border: none;
   outline: none;
-  width: 570px;
+  border-radius: 4px 4px 4px 4px;
+  width: 679px;
   height: 40px;
   font-size: 1.5rem;
-  padding-left: 5px;
+  padding-left: 80px;
+}
+#nav_superior_centro_busqueda:focus-within {
+  outline: solid 3px #FF9900;
+  border-radius: 5px 5px 5px 5px;
 }
 #nav_superior_centro_lupa {
+  position: absolute;
+  left: 639px;
   background-color: #FEBD69;
   padding: 7px 8px 8px 8px;
-  border-radius: 0px 3px 3px 0px;
+  border-radius: 0px 6px 6px 0px;
 }
 #nav_superior_centro_lupa:hover {
-  background-color: #f3a847;
   cursor: pointer;
+  background-color: #f3a847;
 }
-#nav_superior_centro:focus-within {
-  border: solid 3px #FF9900;
-  border-radius: 5px 5px 5px 5px;
-  background-color: #FF9900;
+#nav_superior_centro_lupa:focus {
+  outline: 3px solid #FF9900;
+  background-color: #f3a847;
 }
 #nav_superior_derecha {
   display: flex;
@@ -121,6 +145,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 4px;
   cursor: pointer;
   width: 71px;
   height: 50px;
@@ -136,7 +161,7 @@ body {
   margin-top: 9px;
 }
 #nav_superior_derecha_pais:hover {
-  border: solid 1px white;
+  outline: solid 1px white;
   cursor: pointer;
 }
 #nav_superior_derecha_cuenta {
@@ -164,7 +189,7 @@ body {
   margin: 9px 0px 0px 3px;
 }
 #nav_superior_derecha_cuenta:hover {
-  border: solid 1px white;
+  outline: solid 1px white;
   cursor: pointer;
 }
 #nav_superior_derecha_pedidos {
@@ -183,7 +208,7 @@ body {
   font-weight: bold;
 }
 #nav_superior_derecha_pedidos:hover {
-  border: solid 1px white;
+  outline: solid 1px white;
   cursor: pointer;
 }
 #nav_superior_derecha_carrito {
@@ -207,7 +232,7 @@ body {
   padding-top: 10px;
 }
 #nav_superior_derecha_carrito:hover {
-  border: solid 1px white;
+  outline: solid 1px white;
   cursor: pointer;
 }
 #nav_inferior {
@@ -229,7 +254,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 73px;
-  height: 39px;
+  height: 37px;
 }
 #nav_inferior_izquierda_todo_menu {
   width: 25px;
@@ -240,7 +265,7 @@ body {
   font-weight: bold;
 }
 #nav_inferior_izquierda_todo:hover {
-  border: solid 1px white;
+  outline: solid 1px white;
   cursor: pointer;
 }
 #nav_inferior_izquierda_ofertas {
@@ -248,13 +273,13 @@ body {
   justify-content: center;
   align-items: center;
   width: 113px;
-  height: 39px;
+  height: 37px;
 }
 #nav_inferior_izquierda_ofertas_identificador {
   font-size: 1.4rem;
 }
 #nav_inferior_izquierda_ofertas:hover {
-  border: solid 1px white;
+  outline: solid 1px white;
   cursor: pointer;
 }
 #nav_inferior_izquierda_servicio {
@@ -262,13 +287,13 @@ body {
   justify-content: center;
   align-items: center;
   width: 131px;
-  height: 39px;
+  height: 37px;
 }
 #nav_inferior_izquierda_servicio_identificador {
   font-size: 1.4rem;
 }
 #nav_inferior_izquierda_servicio:hover {
-  border: solid 1px white;
+  outline: solid 1px white;
   cursor: pointer;
 }
 #nav_inferior_izquierda_listas {
@@ -276,13 +301,13 @@ body {
   justify-content: center;
   align-items: center;
   width: 54px;
-  height: 39px;
+  height: 37px;
 }
 #nav_inferior_izquierda_listas_identificador {
   font-size: 1.4rem;
 }
 #nav_inferior_izquierda_listas:hover {
-  border: solid 1px white;
+  outline: solid 1px white;
   cursor: pointer;
 }
 #nav_inferior_izquierda_tarjetas {
@@ -290,13 +315,13 @@ body {
   justify-content: center;
   align-items: center;
   width: 134px;
-  height: 39px;
+  height: 37px;
 }
 #nav_inferior_izquierda_tarjetas_identificador {
   font-size: 1.4rem;
 }
 #nav_inferior_izquierda_tarjetas:hover {
-  border: solid 1px white;
+  outline: solid 1px white;
   cursor: pointer;
 }
 #nav_inferior_izquierda_vender {
@@ -304,13 +329,13 @@ body {
   justify-content: center;
   align-items: center;
   width: 63px;
-  height: 39px;
+  height: 37px;
 }
 #nav_inferior_izquierda_vender_identificador {
   font-size: 1.4rem;
 }
 #nav_inferior_izquierda_vender:hover {
-  border: solid 1px white;
+  outline: solid 1px white;
   cursor: pointer;
 }
 #nav_inferior_derecha {
@@ -325,7 +350,7 @@ body {
   font-weight: bold;
 }
 #nav_inferior_derecha:hover {
-  border: solid 1px white;
+  outline: solid 1px white;
   cursor: pointer;
 }
 
@@ -353,36 +378,66 @@ body {
 }
 
 #productos_fondo_flechaCarruselIzquierda {
-  width: 34px;
-  height: 52px;
-  position: absolute;
-  top: 100px;
-  right: 1300px;
+  width: 25px;
+  height: 40px;
 }
 
 #productos_fondo_flechaCarruselDerecha {
-  width: 34px;
-  height: 52px;
+  width: 25px;
+  height: 40px;
+}
+
+.productos_carrusel_bordeFlechaCarrusel1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
-  left: 1300px;
-  top: 100px;
+  border-radius: 4px;
+  width: 75px;
+  height: 246px;
+  left: 2px;
+  top: 2px;
+}
+
+.productos_carrusel_bordeFlechaCarrusel1:focus-within {
+  border: solid 2px #008296;
+  outline: solid 2px white;
+}
+
+.productos_carrusel_bordeFlechaCarrusel2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  position: absolute;
+  border-radius: 4px;
+  width: 75px;
+  height: 246px;
+  left: 1272px;
+  top: 2px;
+}
+
+.productos_carrusel_bordeFlechaCarrusel2:focus-within {
+  border: solid 2px #008296;
+  outline: solid 2px white;
 }
 
 #productos_grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  margin: 340px 0px 0px 0px;
+  margin: 350px 0px 0px 0px;
   padding: 0px 20px 20px 20px;
   position: absolute;
   width: 100%;
 }
 #productos_grid .productos_grid_articulo {
   display: flex;
+  justify-content: space between;
   padding: 20px;
   width: 312px;
   height: 420px;
-  background-color: #ffffff;
+  background-color: white;
 }
 #productos_grid .productos_grid_articulo_titulo {
   font-size: 1.8rem;
@@ -408,6 +463,7 @@ body {
 #productos_grid_articulo2 {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 20px;
 }
 #productos_grid_articulo2_contenido {
@@ -443,6 +499,7 @@ body {
 #productos_grid_articulo3 {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 10px;
 }
 #productos_grid_articulo3_contenido_imagenytexto_imagen {
@@ -578,17 +635,17 @@ body {
   padding: 10px 20px 10px 10px;
   border: solid 1px #848688;
   border-radius: 3px;
-  width: 150px;
-  height: 40px;
-  gap: 10px;
+  width: 115px;
+  height: 35px;
+  gap: 5px;
 }
 #pieDePagina_acercaDe_divisa_selectores_lenguaje_mundo {
-  height: 25px;
-  width: 25px;
+  height: 18px;
+  width: 18px;
 }
 #pieDePagina_acercaDe_divisa_selectores_lenguaje_p {
-  font-size: 1.5rem;
-  color: white;
+  font-size: 1.3rem;
+  color: #CCCCCC;
 }
 #pieDePagina_acercaDe_divisa_selectores_lenguaje_flechas {
   padding-left: 10px;
@@ -602,12 +659,12 @@ body {
   padding: 10px 20px 10px 10px;
   border: solid 1px #848688;
   border-radius: 3px;
-  width: 230px;
-  height: 42px;
+  width: 210px;
+  height: 38px;
 }
 #pieDePagina_acercaDe_divisa_selectores_moneda_p {
-  color: white;
-  font-size: 1.5rem;
+  color: #CCCCCC;
+  font-size: 1.3rem;
 }
 #pieDePagina_acercaDe_divisa_selectores_moneda:hover {
   cursor: pointer;
@@ -618,12 +675,13 @@ body {
   padding: 10px 20px 10px 10px;
   border: solid 1px #848688;
   border-radius: 3px;
-  width: 160px;
-  height: 40px;
+  width: 155px;
+  height: 35px;
+  gap: 10px;
 }
 #pieDePagina_acercaDe_divisa_selectores_pais_p {
-  color: white;
-  font-size: 1.5rem;
+  color: #CCCCCC;
+  font-size: 1.3rem;
 }
 #pieDePagina_acercaDe_divisa_selectores_pais:hover {
   cursor: pointer;
@@ -645,18 +703,17 @@ body {
 #pieDePagina_productos_columnas_bloque_p1 {
   font-size: 1.4rem;
   color: #DDDDDD;
-}
-#pieDePagina_productos_columnas_bloque_p1:hover {
-  cursor: pointer;
-  text-decoration: underline;
+  text-decoration: none;
 }
 #pieDePagina_productos_columnas_bloque_p2 {
   font-size: 1.3rem;
   color: #999999;
+  text-decoration: none;
 }
-#pieDePagina_productos_columnas_bloque_p2:hover {
+#pieDePagina_productos_columnas_bloque_p1:hover {
   cursor: pointer;
   text-decoration: underline;
+  text-decoration-color: #999999;
 }
 #pieDePagina_productos_derechos {
   display: flex;

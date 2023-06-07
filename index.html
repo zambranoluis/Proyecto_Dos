@@ -5,12 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <link rel="shortcut icon" href="./imagenes/favicon.png">
+    <link rel="shortcut icon" href="./imagenes/favicon2.png">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
     <title>Amazon Mnk</title>
 </head>
 <body>
-    <nav>
-        <div id="nav_superior">
+    <nav class="nav">
+        <div id="nav_superior" class="nav_try">
             <div id="nav_superior_izquierda">
                 <img id="nav_superior_izquierda_logo" src="./imagenes/logo_amazon.png" alt="">
                 <div id="nav_superior_izquierda_envios">
@@ -23,11 +26,43 @@
             </div>
             <div id="nav_superior_centro">
                 <div id="nav_superior_centro_selectorDeCategorias">
-                    <p id="nav_superior_centro_selectorDeCategorias_identificador">Todos</p>
-                    <img id="nav_superior_centro_selectorDeCategorias_flechaDesplegar" src="./imagenes/flechadesplegarnegra.png" alt="">
+                    <select name="Todos" id="nav_superior_centro_selectorDeCategorias_lista">
+                        <option value="" hidden>Todos</option>
+                        <option value="">Todos los departamentos</option>
+                        <option value="">Arte y artesanías</option>
+                        <option value="">Automotríz</option>
+                        <option value="">Bebé</option>
+                        <option value="">Belleza y cuidado personal</option>
+                        <option value="">Cine y TV</option>
+                        <option value="">Computadoras</option>
+                        <option value="">Deportes y actividades al aire libre</option>
+                        <option value="">Electrónicos</option>
+                        <option value="">Equipaje</option>
+                        <option value="">Herramientas y mejoramiento del hogar</option>
+                        <option value="">Hogar y cocina</option>
+                        <option value="">Industrial y científico</option>
+                        <option value="">Insumos para mascotas</option>
+                        <option value="">Juguetes y juegos</option>
+                        <option value="">Libros</option>
+                        <option value="">Moda de niñas</option>
+                        <option value="">Moda de niños</option>
+                        <option value="">Moda para Hombre</option>
+                        <option value="">Moda para Mujer</option>
+                        <option value="">Música MP3</option>
+                        <option value="">Música, CD y vinilos</option>
+                        <option value="">Ofertas</option>
+                        <option value="">Prime Video</option>
+                        <option value="">Salud y productos para el hogar</option>
+                        <option value="">Software</option>
+                        <option value="">Tienda Kindle</option>
+                        <option value="">Videojuegos</option>
+                    </select>
+                    <span class="material-symbols-outlined" id="nav_superior_centro_selectorDeCategorias_flechaDesplegar">
+                        arrow_drop_down
+                    </span>
                 </div>
                 <input id="nav_superior_centro_busqueda" type="text" placeholder="Buscar Amazon">
-                <img id="nav_superior_centro_lupa" src="./imagenes/lupa.png" alt="">
+                <img tabindex="0" id="nav_superior_centro_lupa" src="./imagenes/lupa.png" alt="">
             </div>
             <div id="nav_superior_derecha">
                 <div id="nav_superior_derecha_pais">
@@ -82,14 +117,14 @@
     </nav>
 
     <main>
-        <section id="productos">
-            <div id="productos_fondo">
-                <img  id="productos_fondo_imagen" src="./imagenes/fondo.jpg" alt="">
-                <div class="productos_fondo_bordeFlechaCarrusel">
-                    <img id="productos_fondo_flechaCarruselIzquierda" src="./imagenes/flechacarruselizquierda.png" alt="">
+        <section id="productos" class="productos">
+            <div id="productos_fondo" class="productos_carrusel">
+                <img  id="productos_fondo_imagen" src="./imagenes/fondo1.jpg" alt="">
+                <div tabindex="0" class="productos_carrusel_bordeFlechaCarrusel1">
+                    <img tabindex="0" id="productos_fondo_flechaCarruselIzquierda" src="./imagenes/flechacarruselizquierda.png" alt="">
                 </div>
-                <div class="productos_fondo_bordeFlechaCarrusel">
-                    <img id="productos_fondo_flechaCarruselDerecha" src="./imagenes/flechacarruselderecha.png" alt="">
+                <div class="productos_carrusel_bordeFlechaCarrusel2">
+                    <img tabindex="0" id="productos_fondo_flechaCarruselDerecha" src="./imagenes/flechacarruselderecha.png" alt="">
                 </div>
             </div>
             </section>
@@ -347,124 +382,94 @@
         <div id="pieDePagina_productos">
             <div id="pieDePagina_productos_columnas">   
                 <div id="pieDePagina_productos_columnas_bloque">
-                    <p id="pieDePagina_productos_columnas_bloque_p1">Amazon Music</p>
-                    <p id="pieDePagina_productos_columnas_bloque_p2">Reproduce<br>millones<br>de canciones</p>
+                    <p id="pieDePagina_productos_columnas_bloque_p1">Amazon Music <br> <span id="pieDePagina_productos_columnas_bloque_p2"> Reproduce<br>millones<br>de canciones</span></p>
                 </div>
                 <div id="pieDePagina_productos_columnas_bloque">
-                    <p id="pieDePagina_productos_columnas_bloque_p1">Amazon Advertising</p>
-                    <p id="pieDePagina_productos_columnas_bloque_p2">Encontrar, atraer y <br> captar clientes</p>
+                    <p id="pieDePagina_productos_columnas_bloque_p1">Amazon Advertising <br> <span id="pieDePagina_productos_columnas_bloque_p2">Encontrar, atraer y <br> captar clientes</span> </p>
                 </div>
                 <div id="pieDePagina_productos_columnas_bloque">
-                    <p id="pieDePagina_productos_columnas_bloque_p1">6pm</p>
-                    <p id="pieDePagina_productos_columnas_bloque_p2">Descubre ofertas <br> en marcas de moda</p>
+                    <p id="pieDePagina_productos_columnas_bloque_p1">6pm <br> <span id="pieDePagina_productos_columnas_bloque_p2">Descubre ofertas <br> en marcas de moda</span></p>
                 </div>
                 <div id="pieDePagina_productos_columnas_bloque">
-                    <p id="pieDePagina_productos_columnas_bloque_p1">AbeBooks</p>
-                    <p id="pieDePagina_productos_columnas_bloque_p2">Libros, arte <br> & artículos de <br> colección</p>
+                    <p id="pieDePagina_productos_columnas_bloque_p1">AbeBooks <br> <span id="pieDePagina_productos_columnas_bloque_p2">Libros, arte <br> & artículos de <br> colección</span></p>
                 </div>
                 <div id="pieDePagina_productos_columnas_bloque">
-                    <p id="pieDePagina_productos_columnas_bloque_p1">ACX</p>
-                    <p id="pieDePagina_productos_columnas_bloque_p2">Editorial de <br> Audiolibros <br> Hecho Fácil</p>
+                    <p id="pieDePagina_productos_columnas_bloque_p1">ACX <br> <span id="pieDePagina_productos_columnas_bloque_p2">Editorial de <br> Audiolibros <br> Hecho Fácil</span></p>
                 </div>
                 <div id="pieDePagina_productos_columnas_bloque">
-                    <p id="pieDePagina_productos_columnas_bloque_p1">Venda en Amazon</p>
-                    <p id="pieDePagina_productos_columnas_bloque_p2">Comience una cuenta de <br> venta</p>
+                    <p id="pieDePagina_productos_columnas_bloque_p1">Venda en Amazon <br> <span id="pieDePagina_productos_columnas_bloque_p2">Comience una cuenta de <br> venta</span></p>
                 </div>
                 <div id="pieDePagina_productos_columnas_bloque">
-                    <p id="pieDePagina_productos_columnas_bloque_p1">Amazon <br>Business</p>
-                    <p id="pieDePagina_productos_columnas_bloque_p2">Todo para <br> tu negocio</p>
+                    <p id="pieDePagina_productos_columnas_bloque_p1">Amazon <br>Business <br> <span id="pieDePagina_productos_columnas_bloque_p2">Todo para <br> tu negocio</span></p>
                 </div>
                 <div id="pieDePagina_productos_columnas_bloque">
-                    <p id="pieDePagina_productos_columnas_bloque_p1">AmazonGlobal</p>
-                    <p id="pieDePagina_productos_columnas_bloque_p2">Pedidos de Envío <br> Internacional</p>
+                    <p id="pieDePagina_productos_columnas_bloque_p1">AmazonGlobal <br> <span id="pieDePagina_productos_columnas_bloque_p2">Pedidos de Envío <br> Internacional</span></p>
                 </div>
                 <div id="pieDePagina_productos_columnas_bloque">
-                    <p id="pieDePagina_productos_columnas_bloque_p1">Servicios para el Hogar</p>
-                    <p id="pieDePagina_productos_columnas_bloque_p2">de Amazon <br> Profesionales Elegidos a Mano <br> Garantía de Satisfacción</p>
+                    <p id="pieDePagina_productos_columnas_bloque_p1">Servicios para el Hogar <br> <span id="pieDePagina_productos_columnas_bloque_p2">de Amazon <br> Profesionales Elegidos a Mano <br> Garantía de Satisfacción</span></p>
                 </div>
                 <div id="pieDePagina_productos_columnas_bloque">
-                    <p id="pieDePagina_productos_columnas_bloque_p1">Amazon Ignite</p>
-                    <p id="pieDePagina_productos_columnas_bloque_p2">Vende tus <br> recursos <br>educativos <br> digitales <br> originales</p>
+                    <p id="pieDePagina_productos_columnas_bloque_p1">Amazon Ignite <br> <span id="pieDePagina_productos_columnas_bloque_p2">Vende tus <br> recursos <br>educativos <br> digitales <br> originales</span></p>
                 </div>
                 <div id="pieDePagina_productos_columnas_bloque">
-                    <p id="pieDePagina_productos_columnas_bloque_p1">Amazon Web Services</p>
-                    <p id="pieDePagina_productos_columnas_bloque_p2">Servicios de <br> cómputo <br> en nube <br> escalable</p>
+                    <p id="pieDePagina_productos_columnas_bloque_p1">Amazon Web Services <br> <span id="pieDePagina_productos_columnas_bloque_p2">Servicios de <br> cómputo <br> en nube <br> escalable</span></p>
                 </div>
                 <div id="pieDePagina_productos_columnas_bloque">
-                    <p id="pieDePagina_productos_columnas_bloque_p1">Audible</p>
-                    <p id="pieDePagina_productos_columnas_bloque_p2">Escucha Libros e <br> Interpretaciones <br> de Audio Originales</p>
+                    <p id="pieDePagina_productos_columnas_bloque_p1">Audible <br> <span id="pieDePagina_productos_columnas_bloque_p2">Escucha Libros e <br> Interpretaciones <br> de Audio Originales</span></p>
                 </div>
                 <div id="pieDePagina_productos_columnas_bloque">
-                    <p id="pieDePagina_productos_columnas_bloque_p1">Book Depository</p>
-                    <p id="pieDePagina_productos_columnas_bloque_p2">Libros con <br> Entrega Intl <br> Gratuita</p>
+                    <p id="pieDePagina_productos_columnas_bloque_p1">Book Depository <br> <span id="pieDePagina_productos_columnas_bloque_p2">Libros con <br> Entrega Intl <br> Gratuita</span></p>
                 </div>
                 <div id="pieDePagina_productos_columnas_bloque">
-                    <p id="pieDePagina_productos_columnas_bloque_p1">Box Office Mojo</p>
-                    <p id="pieDePagina_productos_columnas_bloque_p2">Encuentra películas <br> Datos de taquilla</p>
+                    <p id="pieDePagina_productos_columnas_bloque_p1">Box Office Mojo <br> <span id="pieDePagina_productos_columnas_bloque_p2">Encuentra películas <br> Datos de taquilla</span></p>
                 </div>
                 <div id="pieDePagina_productos_columnas_bloque">
-                    <p id="pieDePagina_productos_columnas_bloque_p1">ComiXology</p>
-                    <p id="pieDePagina_productos_columnas_bloque_p2">Miles de <br> Comics Digitales</p>
+                    <p id="pieDePagina_productos_columnas_bloque_p1">ComiXology <br> <span id="pieDePagina_productos_columnas_bloque_p2">Miles de <br> Comics Digitales</span></p>
                 </div>
                 <div id="pieDePagina_productos_columnas_bloque">
-                    <p id="pieDePagina_productos_columnas_bloque_p1">DPReview</p>
-                    <p id="pieDePagina_productos_columnas_bloque_p2">Fotografía <br> Digital</p>
+                    <p id="pieDePagina_productos_columnas_bloque_p1">DPReview <br> <span id="pieDePagina_productos_columnas_bloque_p2">Fotografía <br> Digital</span></p>
                 </div>
                 <div id="pieDePagina_productos_columnas_bloque">
-                    <p id="pieDePagina_productos_columnas_bloque_p1">Fabric</p>
-                    <p id="pieDePagina_productos_columnas_bloque_p2">Costura <br> Acolchado <br> y Tejido</p>
+                    <p id="pieDePagina_productos_columnas_bloque_p1">Fabric <br> <span id="pieDePagina_productos_columnas_bloque_p2">Costura <br> Acolchado <br> y Tejido</span></p>
                 </div>
                 <div id="pieDePagina_productos_columnas_bloque">
-                    <p id="pieDePagina_productos_columnas_bloque_p1">Goodreads</p>
-                    <p id="pieDePagina_productos_columnas_bloque_p2">Análisis de libros <br> y recomendaciones</p>
+                    <p id="pieDePagina_productos_columnas_bloque_p1">Goodreads <br> <span id="pieDePagina_productos_columnas_bloque_p2">Análisis de libros <br> y recomendaciones</span></p>
                 </div>
                 <div id="pieDePagina_productos_columnas_bloque">
-                    <p id="pieDePagina_productos_columnas_bloque_p1">IMDb</p>
-                    <p id="pieDePagina_productos_columnas_bloque_p2">Películas, TV <br> y Celebridades</p>
+                    <p id="pieDePagina_productos_columnas_bloque_p1">IMDb <br> <span id="pieDePagina_productos_columnas_bloque_p2">Películas, TV <br> y Celebridades</span></p>
                 </div>
                 <div id="pieDePagina_productos_columnas_bloque">
-                    <p id="pieDePagina_productos_columnas_bloque_p1">IMDbPro</p>
-                    <p id="pieDePagina_productos_columnas_bloque_p2">Obtén información de <br> entretenimiento <br> que los profesionales <br>necesitan</p>
+                    <p id="pieDePagina_productos_columnas_bloque_p1">IMDbPro <br> <span id="pieDePagina_productos_columnas_bloque_p2">Obtén información de <br> entretenimiento <br> que los profesionales <br>necesitan</span></p>
                 </div>
                 <div id="pieDePagina_productos_columnas_bloque">
-                    <p id="pieDePagina_productos_columnas_bloque_p1">Kindle Direct Publishing</p>
-                    <p id="pieDePagina_productos_columnas_bloque_p2">Publica tu libro en papel y <br> digital <br>de manera independiente</p>
+                    <p id="pieDePagina_productos_columnas_bloque_p1">Kindle Direct Publishing <br> <span id="pieDePagina_productos_columnas_bloque_p2">Publica tu libro en papel y <br> digital <br>de manera independiente</span></p>
                 </div>
                 <div id="pieDePagina_productos_columnas_bloque">
-                    <p id="pieDePagina_productos_columnas_bloque_p1">Prime Video <br> Direct</p>
-                    <p id="pieDePagina_productos_columnas_bloque_p2">Distribución de <br> Video <br> Sin Esfuerzo</p>
+                    <p id="pieDePagina_productos_columnas_bloque_p1">Prime Video <br> Direct <br> <span id="pieDePagina_productos_columnas_bloque_p2">Distribución de <br> Video <br> Sin Esfuerzo</span></p>
                 </div>
                 <div id="pieDePagina_productos_columnas_bloque">
-                    <p id="pieDePagina_productos_columnas_bloque_p1">Shopbop</p>
-                    <p id="pieDePagina_productos_columnas_bloque_p2">Diseñador <br> Marcas de Moda</p>
+                    <p id="pieDePagina_productos_columnas_bloque_p1">Shopbop <br> <span id="pieDePagina_productos_columnas_bloque_p2">Diseñador <br> Marcas de Moda</span></p>
                 </div>
                 <div id="pieDePagina_productos_columnas_bloque">
-                    <p id="pieDePagina_productos_columnas_bloque_p1">Woot!</p>
-                    <p id="pieDePagina_productos_columnas_bloque_p2">Descuentos y <br> travesuras</p>
+                    <p id="pieDePagina_productos_columnas_bloque_p1">Woot! <br> <span id="pieDePagina_productos_columnas_bloque_p2">Descuentos y <br> travesuras</span></p>
                 </div>
                 <div id="pieDePagina_productos_columnas_bloque">
-                    <p id="pieDePagina_productos_columnas_bloque_p1">Zappos</p>
-                    <p id="pieDePagina_productos_columnas_bloque_p2">Zapatos y<br>ropa</p>
+                    <p id="pieDePagina_productos_columnas_bloque_p1">Zappos <br> <span id="pieDePagina_productos_columnas_bloque_p2">Zapatos y<br>ropa</span></p>
                 </div>
                 <div id="pieDePagina_productos_columnas_bloque">
-                    <p id="pieDePagina_productos_columnas_bloque_p1">Ring</p>
-                    <p id="pieDePagina_productos_columnas_bloque_p2">Casa Inteligente<br>Sistemas de Seguridad</p>
+                    <p id="pieDePagina_productos_columnas_bloque_p1">Ring <br> <span id="pieDePagina_productos_columnas_bloque_p2">Casa Inteligente<br>Sistemas de Seguridad</span></p>
                 </div>
                 <div id="pieDePagina_productos_columnas_bloque">
-                    <p id="pieDePagina_productos_columnas_bloque_p1">Wifi eero</p>
-                    <p id="pieDePagina_productos_columnas_bloque_p2">Video 4K en tiempo real en <br> todas las habitaciones</p>
+                    <p id="pieDePagina_productos_columnas_bloque_p1">Wifi eero <br> <span id="pieDePagina_productos_columnas_bloque_p2">Video 4K en tiempo real en <br> todas las habitaciones</span></p>
                 </div>
                 <div id="pieDePagina_productos_columnas_bloque">
-                    <p id="pieDePagina_productos_columnas_bloque_p1">Blink</p>
-                    <p id="pieDePagina_productos_columnas_bloque_p2">Seguridad<br> inteligente <br> para todos los <br> hogares</p>
+                    <p id="pieDePagina_productos_columnas_bloque_p1">Blink <br> <span id="pieDePagina_productos_columnas_bloque_p2">Seguridad<br> inteligente <br> para todos los <br> hogares</span></p>
                 </div>
                 <div id="pieDePagina_productos_columnas_bloque">
-                    <p id="pieDePagina_productos_columnas_bloque_p1">Neighbors App</p>
-                    <p id="pieDePagina_productos_columnas_bloque_p2">Alertas de<br>Seguridad <br> y delitos en <br>tiempo real</p>
+                    <p id="pieDePagina_productos_columnas_bloque_p1">Neighbors App <br> <span id="pieDePagina_productos_columnas_bloque_p2">Alertas de<br>Seguridad <br> y delitos en <br>tiempo real</span></p>
                 </div>
                 <div id="pieDePagina_productos_columnas_bloque">
-                    <p id="pieDePagina_productos_columnas_bloque_p1">Suscríbete con Amazon</p>
-                    <p id="pieDePagina_productos_columnas_bloque_p2">a los servicios de <br> suscripción <br> de "Discover & try"</p>
+                    <p id="pieDePagina_productos_columnas_bloque_p1">Suscríbete con Amazon <br> <span id="pieDePagina_productos_columnas_bloque_p2">a los servicios de <br> suscripción <br> de "Discover & try"</span></p>
                 </div>
             </div>
             <div id="pieDePagina_productos_derechos">

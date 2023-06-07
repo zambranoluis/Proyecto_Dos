@@ -1,13 +1,12 @@
 #productos_grid
-    @include orientacion_cajas(grid, null, null, null, repeat(4,1fr), null, 20px, 340px 0px 0px 0px, 0px 20px 20px 20px )
+    @include orientacion_cajas(grid, null, null, null, repeat(4,1fr), null, 20px, 350px 0px 0px 0px, 0px 20px 20px 20px )
     position: absolute
     width: 100%
     .productos_grid_articulo
-        display: flex
-        padding: 20px
+        @include orientacion_cajas(flex, null, space between, null, null, null, null, null, 20px)
         width: 312px
         height: 420px
-        background-color: #ffffff
+        background-color: white
     .productos_grid_articulo_titulo
         font-size: 1.8rem
         font-weight: bold
@@ -18,13 +17,13 @@
             border: none
             border-radius: 8px
             font-size: 1.3rem
-            background-color: #FFD814
+            background-color: $color_bg_cuadrillaBoton
             padding: 8px 20px 8px 20px
         &_boton:hover
             cursor: pointer
-            background-color: #F7CA00
+            background-color: $color_bg_cuadrillaBotonHover
     &_articulo2
-        @include orientacion_cajas (flex, column, null, null, null, null, 20px)
+        @include orientacion_cajas (flex, column, space-between, null, null, null, 20px)
         &_contenido
             @include orientacion_cajas (grid, null, null, null, repeat(2,1fr), null, 15px)
             &_imagenytexto
@@ -38,14 +37,14 @@
                 cursor: pointer
         &_foot
             padding-top: 20px
-            color: #007185
+            color: $color_letra_cuadrillaAnclaFoot
             font-size: 1.3rem
         &_foot:hover
-            color: #C7511F
+            color: $color_letra_cuadrillaAnclaFootHover
             text-decoration: underline
             cursor: pointer
     &_articulo3
-        @include orientacion_cajas (flex, column, null, null, null, null, 10px)
+        @include orientacion_cajas (flex, column, space-between, null, null, null, 10px)
         &_contenido
             &_imagenytexto
                 &_imagen
