@@ -1,9 +1,11 @@
 #productos_fondo
-    width: 100%
+    display: flex
+    // width: 100%
     position: relative
+    animation: animacionTransicionAutomatica 16.8s linear infinite
 #productos_fondo_imagen
-    width: 100%
-#productos_fondo::after 
+    width: 1366px
+#productos_fondo::after
     content: ""
     width: 100%
     height: 300px
@@ -14,6 +16,30 @@
 #productos_fondo:hover
     cursor: pointer
 
+@keyframes animacionTransicionAutomatica
+    0%
+        transform: translate(0%,0px)
+
+    24%
+        transform: translate(0%,0px)
+
+    25.2%
+        transform: translate(-1366px,0px)
+
+    49.2%
+        transform: translate(-1366px,0px)
+
+    50.4%
+        transform: translate(-2732px,0px)
+
+    74.4%
+        transform: translate(-2732px,0px)
+
+    75.6%
+        transform: translate(-4098px,0px)
+
+    100%
+        transform: translate(-4098px,0px)
 
 #productos_fondo_flechaCarruselIzquierda
     width: 25px
@@ -28,11 +54,12 @@
     align-items: center
     justify-content: center
     position: absolute
+    z-index: 1
     border-radius: 4px
     width: 75px
     height: 246px
     left: 2px
-    top: 2px
+    top: 100px
 
 .productos_carrusel_bordeFlechaCarrusel1:focus-within
     border: solid 2px #008296
@@ -48,7 +75,7 @@
     width: 75px
     height: 246px
     left: 1272px
-    top: 2px
+    top: 100px
 
 .productos_carrusel_bordeFlechaCarrusel2:focus-within
     border: solid 2px #008296
