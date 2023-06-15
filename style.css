@@ -9,12 +9,16 @@
 
 body {
   background-color: #E3E6E6;
+  overflow-x: hidden;
 }
 
+#nav {
+  display: flex;
+}
 #nav_superior {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 15px;
   padding: 0px 10px 0px 10px;
   background-color: #121921;
   color: white;
@@ -62,18 +66,15 @@ body {
   justify-content: center;
   align-items: center;
   padding: 0.6px 0px 0px 0px;
-  width: 680px;
+  width: 661px;
   height: 40px;
   position: relative;
 }
 #nav_superior_centro_selectorDeCategorias {
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 #nav_superior_centro_selectorDeCategorias_lista {
   position: absolute;
-  left: -0.55px;
   color: #555555;
   border: none;
   outline: none;
@@ -82,7 +83,7 @@ body {
           appearance: none;
   width: 65px;
   height: 40px;
-  border-radius: 6px 0px 0px 6px;
+  border-radius: 4px 0px 0px 4px;
   font-size: 1.2rem;
   padding: 4px 0px 0px 10px;
 }
@@ -111,7 +112,7 @@ body {
   border: none;
   outline: none;
   border-radius: 4px 4px 4px 4px;
-  width: 679px;
+  width: 100%;
   height: 40px;
   font-size: 1.5rem;
   padding-left: 80px;
@@ -122,10 +123,11 @@ body {
 }
 #nav_superior_centro_lupa {
   position: absolute;
-  left: 639px;
+  width: 61;
+  left: 620px;
   background-color: #FEBD69;
   padding: 7px 8px 8px 8px;
-  border-radius: 0px 6px 6px 0px;
+  border-radius: 0px 4px 4px 0px;
 }
 #nav_superior_centro_lupa:hover {
   cursor: pointer;
@@ -355,12 +357,13 @@ body {
 }
 
 #productos_fondo {
-  width: 100%;
+  display: flex;
   position: relative;
+  animation: animacionTransicionAutomatica 16.8s linear infinite;
 }
 
 #productos_fondo_imagen {
-  width: 100%;
+  width: 1366px;
 }
 
 #productos_fondo::after {
@@ -377,6 +380,32 @@ body {
   cursor: pointer;
 }
 
+@keyframes animacionTransicionAutomatica {
+  0% {
+    transform: translate(0%, 0px);
+  }
+  24% {
+    transform: translate(0%, 0px);
+  }
+  25.2% {
+    transform: translate(-1366px, 0px);
+  }
+  49.2% {
+    transform: translate(-1366px, 0px);
+  }
+  50.4% {
+    transform: translate(-2732px, 0px);
+  }
+  74.4% {
+    transform: translate(-2732px, 0px);
+  }
+  75.6% {
+    transform: translate(-4098px, 0px);
+  }
+  100% {
+    transform: translate(-4098px, 0px);
+  }
+}
 #productos_fondo_flechaCarruselIzquierda {
   width: 25px;
   height: 40px;
@@ -392,11 +421,12 @@ body {
   align-items: center;
   justify-content: center;
   position: absolute;
+  z-index: 1;
   border-radius: 4px;
   width: 75px;
   height: 246px;
   left: 2px;
-  top: 2px;
+  top: 100px;
 }
 
 .productos_carrusel_bordeFlechaCarrusel1:focus-within {
@@ -414,7 +444,7 @@ body {
   width: 75px;
   height: 246px;
   left: 1272px;
-  top: 2px;
+  top: 100px;
 }
 
 .productos_carrusel_bordeFlechaCarrusel2:focus-within {
