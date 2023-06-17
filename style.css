@@ -359,11 +359,15 @@ body {
 #productos_fondo {
   display: flex;
   position: relative;
-  animation: animacionTransicionAutomatica 16.8s linear infinite;
 }
 
 #productos_fondo_imagen {
   width: 1366px;
+}
+
+#productos_fondo_rotacion {
+  display: flex;
+  animation: animacionTransicionAutomatica 16.8s linear infinite;
 }
 
 #productos_fondo::after {
